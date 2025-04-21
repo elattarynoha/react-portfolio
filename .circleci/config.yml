@@ -3,7 +3,7 @@ version: 2.1
 executors:
   node-executor:
     docker:
-      - image: cimg/node:20.11.1  # ✅ version compatible avec firebase-tools
+      - image: cimg/node:18.18.2
 
 jobs:
   build:
@@ -20,16 +20,18 @@ jobs:
           root: .
           paths:
             - build
+            - firebase.json
 
   deploy:
-    executor: node-executor
+    docker:
+      - image: cimg/node:18.18.2
     steps:
       - checkout
       - attach_workspace:
           at: .
       - run:
-          name: Install Firebase CLI locally
-          command: npm install firebase-tools
+          name: Install Firebase CLI
+          command: sudo npm install -g firebase-tools
       - run:
           name: Deploy to Firebase Hosting
           command: npx firebase deploy --only hosting --token "$FIREBASE_TOKEN"
