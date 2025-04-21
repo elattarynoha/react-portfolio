@@ -45,5 +45,5 @@ workflows:
       - build
       - deploy:
           requires:
-            - build #lance le job
+            - build
             
