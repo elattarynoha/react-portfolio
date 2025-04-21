@@ -37,7 +37,7 @@ jobs:
       - run:
           name: Deploy to GCP Bucket
           command: |
-            gsutil -m rsync -r build gs://$GCP_BUCKET_NAME
+            gsutil -m rsync -r build gs://$FIREBASE_TOKEN
 
 workflows:
   build-and-deploy:
