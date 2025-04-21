@@ -3,7 +3,7 @@ version: 2.1
 executors:
   node-executor:
     docker:
-      - image: cimg/node:18.18.2
+      - image: cimg/node:20  # Met à jour vers la version 20
 
 jobs:
   build:
@@ -24,7 +24,7 @@ jobs:
 
   deploy:
     docker:
-      - image: cimg/node:18.18.2
+      - image: cimg/node:20  # Utilise la version 20
     steps:
       - checkout
       - attach_workspace:
