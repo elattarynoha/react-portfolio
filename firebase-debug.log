@@ -1,0 +1,56 @@
+[debug] [2025-04-22T21:54:37.943Z] ----------------------------------------------------------------------
+[debug] [2025-04-22T21:54:37.948Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-04-22T21:54:37.949Z] CLI Version:   14.2.0
+[debug] [2025-04-22T21:54:37.950Z] Platform:      win32
+[debug] [2025-04-22T21:54:37.950Z] Node Version:  v22.14.0
+[debug] [2025-04-22T21:54:37.951Z] Time:          Tue Apr 22 2025 23:54:37 GMT+0200 (heure d’été d’Europe centrale)
+[debug] [2025-04-22T21:54:37.951Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-22T21:54:38.459Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-22T21:54:38.460Z] > authorizing via signed-in user (nohaila.el-attary.61@edu.uiz.ac.ma)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\PC\Downloads\Portfolio-master
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-04-22T21:54:46.700Z] Using project from CLI flag: hosting-portfolio-react
+[debug] [2025-04-22T21:54:46.704Z] Checked if tokens are valid: false, expires at: 1745275604797
+[debug] [2025-04-22T21:54:46.704Z] Checked if tokens are valid: false, expires at: 1745275604797
+[debug] [2025-04-22T21:54:46.705Z] > refreshing access token with scopes: []
+[debug] [2025-04-22T21:54:46.710Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-04-22T21:54:46.711Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-04-22T21:54:48.310Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-04-22T21:54:48.311Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-04-22T21:54:48.339Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hosting-portfolio-react [none]
+[debug] [2025-04-22T21:54:49.737Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hosting-portfolio-react 200
+[debug] [2025-04-22T21:54:49.737Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hosting-portfolio-react {"projectId":"hosting-portfolio-react","projectNumber":"637043388847","displayName":"hosting portfolio react","name":"projects/hosting-portfolio-react","resources":{"hostingSite":"hosting-portfolio-react"},"state":"ACTIVE","etag":"1_7cbc50bf-90aa-4f52-b1e9-4386a2f5f413"}
+[info] i  Using project hosting-portfolio-react (hosting portfolio react) 
+[info] 
+=== Hosting Setup
+[debug] [2025-04-22T21:54:49.760Z] Checked if tokens are valid: true, expires at: 1745362487311
+[debug] [2025-04-22T21:54:49.760Z] Checked if tokens are valid: true, expires at: 1745362487311
+[debug] [2025-04-22T21:54:49.761Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hosting-portfolio-react [none]
+[debug] [2025-04-22T21:54:50.151Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hosting-portfolio-react 200
+[debug] [2025-04-22T21:54:50.152Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hosting-portfolio-react {"projectId":"hosting-portfolio-react","projectNumber":"637043388847","displayName":"hosting portfolio react","name":"projects/hosting-portfolio-react","resources":{"hostingSite":"hosting-portfolio-react"},"state":"ACTIVE","etag":"1_7cbc50bf-90aa-4f52-b1e9-4386a2f5f413"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
