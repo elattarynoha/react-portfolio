@@ -21,8 +21,6 @@ jobs:
           paths:
             - build
             - firebase.json
-            - .firebaserc  # ⚠️ Très important pour savoir sur quel projet déployer
-
   deploy:
     executor: node-executor
     steps:
