@@ -1,41 +1,48 @@
+# Version du schéma de configuration utilisé par CircleCI
 version: 2.1
 
+# Définition des exécuteurs, ici on utilise une image Docker contenant Node.js
 executors:
   node-executor:
     docker:
-      - image: cimg/node:20.2.0
+      - image: cimg/node:20.2.0  # Image officielle avec Node.js 20.2.0
 
+# Définition des jobs (tâches à exécuter)
 jobs:
+  # Premier job : build (construction du projet)
   build:
-    executor: node-executor
+    executor: node-executor  # Utilisation de l’exécuteur défini plus haut
     steps:
-      - checkout
+      - checkout  # Récupère le code source depuis GitHub
       - run:
-          name: Install dependencies
+          name: Install dependencies  # Étape d'installation des dépendances
           command: npm install
       - run:
-          name: Build project
+          name: Build project  # Étape de compilation du projet React
           command: npm run build
       - persist_to_workspace:
-          root: .
+          root: .  # Répertoire racine du projet
           paths:
-            - build
-            - firebase.json
+            - build           # Dossier généré après le build
+            - firebase.json   # Fichier de configuration nécessaire pour Firebase
 
+  # Deuxième job : deploy (déploiement sur Firebase)
   deploy:
-    executor: node-executor
+    executor: node-executor  # Utilisation du même environnement Node
     steps:
-      - checkout
+      - checkout  # Récupère à nouveau le code source
       - attach_workspace:
-          at: .
+          at: .  # Réattache les fichiers sauvegardés pendant le job 'build'
       - run:
-          name: Deploy to Firebase Hosting
+          name: Deploy to Firebase Hosting  # Étape de déploiement
           command: npx firebase-tools deploy --only hosting --token "$FIREBASE_TOKEN"
+          # Utilise le token d'authentification stocké dans les variables d’environnement
 
+# Définition du workflow (enchaînement des jobs)
 workflows:
   build-and-deploy:
     jobs:
-      - build
+      - build  # Exécute le job de build en premier
       - deploy:
           requires:
-            - build
+            - build  # Le job deploy ne se lance que si build a réussi
