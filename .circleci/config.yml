@@ -34,7 +34,7 @@ jobs:
           command: sudo npm install -g firebase-tools
       - run:
           name: Deploy to Firebase Hosting
-          command: npx firebase deploy --only hosting --token "$Firebase_Key_deploy"
+          command: npx firebase deploy --only hosting --token "$Firebase_Key"
 
 workflows:
   build-and-deploy:
