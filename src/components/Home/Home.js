@@ -22,8 +22,9 @@ function Home() {
 
               <h1 className="heading-name">
                 I'M
-                <strong className="main-name"> Nohaila Atr</strong>
+                <strong className="main-name">Nohaila-Atr</strong>
               </h1>
+              
 
               <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />
@@ -45,5 +46,4 @@ function Home() {
     </section>
   );
 }
-
 export default Home;
