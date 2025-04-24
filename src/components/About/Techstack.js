@@ -42,4 +42,5 @@ function Techstack() {
   );
 }
 
+//export 
 export default Techstack;
