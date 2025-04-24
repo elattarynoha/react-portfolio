@@ -1,11 +1,16 @@
 {
   "hosting": {
-    "site": "hosting-portfolio-38eaa", 
     "public": "build",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   }
 }
