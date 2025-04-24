@@ -8,6 +8,7 @@ import {
   SiMacos,
   SiJavascript,
   SiCircle,
+  SiFirebase,
 } from "react-icons/si";
 
 function Toolstack() {
