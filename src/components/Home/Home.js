@@ -21,8 +21,8 @@ function Home() {
               </h1>
 
               <h1 className="heading-name">
-                I'M
-                <strong className="main-name"> Nohaila El-attary</strong>
+                
+                <strong className="main-name">Nohaila El-attary</strong>
               </h1>
               
 
