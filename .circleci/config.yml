@@ -45,4 +45,4 @@ workflows:
       - build  # Exécute le job de build en premier
       - deploy:
           requires:
-            - build  # lancer le job
+            - build  # lancer le job de deploy
