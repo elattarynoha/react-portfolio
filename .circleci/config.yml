@@ -1,4 +1,4 @@
-# Version du schéma de configuration utilisé par CircleCI
+
 version: 2.1
 
 # Définition des exécuteurs, ici on utilise une image Docker contenant Node.js
@@ -7,7 +7,7 @@ executors:
     docker:
       - image: cimg/node:20.2.0  # Image officielle avec Node.js 20.2.0
 
-# Définition des jobs (tâches à exécuter)
+# tâches à exécuter
 jobs:
   # Premier job : build (construction du projet)
   build:
@@ -35,14 +35,14 @@ jobs:
           at: .  # Réattache les fichiers sauvegardés pendant le job 'build'
       - run:
           name: Deploy to Firebase Hosting  # Étape de déploiement
-          command: npx firebase-tools deploy --only hosting --token "$FIREBASE_TOKEN"
+          command: npx firebase-tools deploy --only hosting --token "$FIREBASE_TOKEN"  #firebase init:ci
           # Utilise le token d'authentification stocké dans les variables d’environnement
 
-# Définition du workflow (enchaînement des jobs)
+# Définition du workflow (enchaînement des jobs) 
 workflows:
   build-and-deploy:
     jobs:
-      - build  # Exécute le job de build en premier
+      - build 
       - deploy:
           requires:
-            - build  # Le job deploy ne se lance que si build a réussi
+            - build  
