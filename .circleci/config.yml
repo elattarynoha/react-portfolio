@@ -42,7 +42,7 @@ jobs:
 workflows:
   build-and-deploy:
     jobs:
-      - build 
+      - build  # Exécute le job de build en premier
       - deploy:
           requires:
-            - build  
+            - build  # lancer le job
